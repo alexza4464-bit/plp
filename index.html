@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1a2386">
+<title>DAMNEDIT · Formulir Data Laporan PLP</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#1a2386;--card:#fff;--tx:#1d2330;--mut:#4b5563;--bd:#d5d9e2;--ac:#1a2386;--acx:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121a6b}}
+:root[data-theme="dark"]{--bg:#121a6b}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+fieldset{min-width:0}
+.g2>div{min-width:0}
+body{margin:0;background:var(--bg);color:#fff;font:15px/1.55 Poppins,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;position:relative;overflow-x:hidden}
+body::before{content:"";position:absolute;top:-120px;right:-140px;width:340px;height:340px;border-radius:50%;background:#2a3f9e;z-index:0}
+body::after{content:"";position:absolute;top:330px;left:-90px;width:170px;height:170px;border-radius:50%;background:#ffd23f;z-index:0}
+main{position:relative;z-index:1}
+main{max-width:720px;margin:0 auto;padding:16px 14px 48px}
+p.sub{color:var(--mut);margin:0 0 14px;font-size:.92rem}
+.warn{background:var(--card);border:1px solid var(--ac);border-radius:10px;padding:10px 12px;font-size:.88rem;margin-bottom:14px}
+fieldset{background:var(--card);border:1px solid var(--bd);border-radius:12px;margin:0 0 14px;padding:12px 14px 14px}
+legend{font-weight:700;padding:0 6px;color:var(--ac)}
+label{display:block;font-size:.85rem;color:var(--mut);margin:10px 0 3px}
+select{width:100%;font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px 10px}
+input,textarea{width:100%;font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:8px;padding:8px 10px}
+textarea{min-height:84px;resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--ac);outline-offset:0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
+@media (max-width:520px){.g2{grid-template-columns:1fr}}
+.row{border:1px dashed var(--bd);border-radius:10px;padding:8px 10px;margin-top:10px}
+.row b{font-size:.85rem}
+button{font:inherit;border:0;border-radius:8px;padding:10px 14px;background:var(--ac);color:var(--acx);font-weight:600;cursor:pointer}
+button.alt{background:transparent;color:var(--ac);border:1px solid var(--ac)}
+.bar{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+#out{min-height:220px;font:13px/1.45 ui-monospace,Menlo,Consolas,monospace}
+#msg{color:#d9dcff;font-size:.88rem;margin-top:8px}
+.tag{display:inline-block;border:2px solid #ffd23f;color:#ffd23f;border-radius:999px;padding:5px 16px;font-size:.68rem;font-weight:600;letter-spacing:.2em;margin-top:10px}
+.brand{font-size:clamp(2.6rem,15vw,4.2rem);font-weight:800;line-height:1;letter-spacing:-.03em;margin:14px 0 8px}
+.brand span{color:#ffd23f}
+h1{font-size:1.15rem;font-weight:600;margin:0 0 6px}
+main>p.sub{color:#e6e8ff}
+fieldset,.warn{color:var(--tx);border:0;border-radius:22px;padding:16px 16px 18px;box-shadow:0 2px 0 rgba(0,0,0,.08)}
+.warn{border-left:6px solid #ffd23f}
+legend{font-weight:800;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:#1a2386;background:#ffd23f;border-radius:999px;padding:5px 16px}
+input,textarea,select{background:#f3f4fb;color:var(--tx);font-size:16px}
+button:focus-visible,.wa:focus-visible{outline:3px solid #fff;outline-offset:2px}
+form>label{color:#fff}
+#out{background:#fff}
+button{border-radius:999px;font-weight:800}
+button:not(.alt){background:#ffd23f;color:#1a2386}
+button.alt{border-width:2px}
+.wa{display:flex;align-items:center;gap:12px;background:#ffd23f;color:#1a2386;text-decoration:none;border-radius:999px;padding:14px 22px;margin-top:22px}
+.wa small{display:block;font-size:.68rem;font-weight:800;letter-spacing:.18em}
+.wa b{font-size:1.35rem;font-weight:800;line-height:1.2}
+.send{margin-top:12px}
+.send.done{opacity:.6}
+[hidden]{display:none!important}
+fieldset button:focus-visible{outline-color:#1a2386}
+button.wa{width:100%;text-align:left;font:inherit;border:0;cursor:pointer;margin-top:12px}
+#txtbox{margin-top:14px}
+#txtbox .bar button{flex:1 1 auto}
+#msg2{color:#d9dcff;font-size:.88rem;margin-top:8px}
+#msg2 a{color:#ffd23f;font-weight:600}
+details{margin-top:14px;color:#e6e8ff;font-size:.88rem}
+summary{cursor:pointer;padding:6px 0}
+.ft{text-align:center;font-size:.78rem;color:#d9dcff;margin:14px 0 0}
+</style>
+</head>
+<body>
+<main>
+<div class="tag">PROOFREADING · EDITING · FORMAT</div>
+<div class="brand">DAMN<span>EDIT</span></div>
+<h1>Formulir Data Laporan PLP</h1>
+<p class="sub">Naskah rapi, format sesuai kampus, sitasi anti pusing. Isi sebisanya, tekan “Buat ringkasan”, lalu kirim langsung ke WhatsApp DAMNEDIT. Data yang dikosongkan akan ditandai kosong, tidak diisi perkiraan.</p>
+<div class="warn">Formulir ini memuat NIP/NUPTK. Data tidak disimpan di server mana pun. File TXT dibuat di perangkatmu sendiri. Data baru terkirim ketika kamu menekan tombol kirim di WhatsApp, dan hanya ke admin DAMNEDIT.</div>
+
+<form id="f" onsubmit="return false">
+<fieldset><legend>1. Identitas mahasiswa</legend>
+<div class="g2"><div><label>Nama lengkap</label><input name="nama"></div><div><label>NIM</label><input name="nim"></div></div>
+<div class="g2"><div><label>Program studi</label><input name="prodi"></div><div><label>Kelas yang diajar</label><input name="kelas" placeholder="mis. XI Bisnis Digital"></div></div>
+<div class="g2"><div><label>Mata pelajaran</label><input name="mapel"></div><div><label>Program keahlian</label><input name="proker" placeholder="mis. Bisnis Digital"></div></div>
+<div class="g2"><div><label>Kelas / Fase</label><input name="fase" placeholder="mis. XI / F"></div><div><label>Alokasi waktu per pertemuan</label><input name="alokasi" value="2 × 45 menit"></div></div>
+<label>Nama sekolah tempat PLP</label><input name="sekolah" placeholder="mis. Greenfield International School, Singapore">
+<div class="g2"><div><label>Universitas</label><input name="univ" value="Universitas PGRI Argopuro Jember"></div><div><label>Fakultas</label><input name="fak" value="Fakultas Keguruan dan Ilmu Pendidikan"></div></div>
+<div class="g2"><div><label>Tahun laporan</label><input name="tahun" value="2026"></div><div><label>Buku pedoman yang dipakai</label><input name="pedoman" value="Buku Panduan PLP FKIP 2026"></div></div>
+</fieldset>
+
+<fieldset><legend>2. Pejabat dan nomor identitas</legend>
+<div class="g2"><div><label>Kepala Sekolah (nama + gelar)</label><input name="ks_nama"></div><div><label>NIP/NUPTK Kepala Sekolah</label><input name="ks_no" inputmode="numeric"></div></div>
+<div class="g2"><div><label>Guru Pamong (nama + gelar)</label><input name="gp_nama"></div><div><label>NIP/NUPTK Guru Pamong</label><input name="gp_no" inputmode="numeric"></div></div>
+<div class="g2"><div><label>Dosen Pembimbing Lapangan (nama + gelar)</label><input name="dpl_nama"></div><div><label>NIS/NIP DPL</label><input name="dpl_no"></div></div>
+<div class="g2"><div><label>Dekan (nama + gelar)</label><input name="dekan_nama"></div><div><label>NIS/NIP Dekan</label><input name="dekan_no"></div></div>
+<div class="g2"><div><label>Ka. Bag. PLP dan PPL (nama + gelar)</label><input name="kabag_nama"></div><div><label>NIS/NIP Ka. Bag.</label><input name="kabag_no"></div></div>
+</fieldset>
+
+<fieldset><legend>3. Masa PLP</legend>
+<div class="g2"><div><label>Tanggal penerjunan</label><input name="terjun" placeholder="mis. 4 Agustus 2026"></div><div><label>Tanggal penarikan</label><input name="tarik" placeholder="mis. 19 September 2026"></div></div>
+<div class="g2"><div><label>Tanggal tanda tangan laporan</label><input name="ttd"></div><div><label>Hari mengajar tiap minggu</label><input name="hari" placeholder="mis. Kamis dan Sabtu"></div></div>
+<label>Tanggal mulai mengajar &amp; hari terakhir mengajar</label><input name="mulai" placeholder="mis. mulai 6 Agustus, terakhir 12 September">
+<label>Libur / kegiatan sekolah yang memengaruhi jadwal</label><textarea name="libur" placeholder="mis. 17 Agustus libur Hari Kemerdekaan; awal PLP sekolah masih masa orientasi"></textarea>
+</fieldset>
+
+<fieldset><legend>4. Jadwal dan materi mengajar</legend>
+<p class="sub" style="margin:0">Satu kotak per pertemuan. Jumlah hadir dan catatan boleh dikosongkan, tetapi isi sesuai kejadian sebenarnya jika ada.</p>
+<div id="rows"></div>
+<div class="bar"><button type="button" class="alt" id="add">+ Tambah pertemuan</button><button type="button" class="alt" id="del">− Hapus yang terakhir</button></div>
+</fieldset>
+
+<fieldset><legend>5. Profil sekolah</legend>
+<p class="sub" style="margin:0">Isi singkat saja, sebisanya. Yang belum ada boleh dikosongkan.</p>
+<label>Identitas sekolah (nama resmi, alamat, akreditasi, kontak)</label><textarea name="p_id" style="min-height:70px"></textarea>
+<label>Visi dan misi (ringkas atau tempel apa adanya)</label><textarea name="p_visi" style="min-height:70px"></textarea>
+<div class="g2"><div><label>Jumlah guru dan staf</label><input name="p_sdm" placeholder="mis. 20 guru, 5 staf"></div><div><label>Jumlah siswa</label><input name="p_siswa" placeholder="mis. 150 siswa, 6 kelas"></div></div>
+<label>Daftar guru dan staf (satu orang per baris: nama – tugas/mapel – jabatan)</label><textarea name="p_guru" style="min-height:130px" placeholder="mis.&#10;Budi Santoso, S.Pd. – Guru Matematika – Waka Kurikulum&#10;Siti Aminah, S.Kom. – Guru Informatika – Wali Kelas XI&#10;Ahmad Fauzi – Tata Usaha – Staf administrasi"></textarea>
+<label>Sarana dan prasarana utama</label><textarea name="p_sarana" style="min-height:70px" placeholder="mis. 10 ruang kelas, lab komputer, perpustakaan, mushola"></textarea>
+<label>Prestasi dan ekstrakurikuler</label><textarea name="p_ekskul" style="min-height:70px"></textarea>
+<label>Catatan observasi (kultur sekolah, struktur organisasi)</label><textarea name="o_kultur" style="min-height:70px"></textarea>
+</fieldset>
+
+<fieldset><legend>6. Lembar observasi (Lampiran 1 dan 2)</legend>
+<p class="sub" style="margin:0">Pilih sesuai pengamatan sebenarnya. Biarkan “—” bila belum diamati; tidak akan dianggap “Ya”.</p>
+<label><b>Lampiran 1: Kultur sekolah</b></label><div id="k1"></div>
+<label style="margin-top:14px"><b>Lampiran 2: SOTK</b></label><div id="k2"></div>
+</fieldset>
+
+<fieldset><legend>7. Log bimbingan (Lampiran 14)</legend>
+<div id="logs"></div>
+<div class="bar"><button type="button" class="alt" id="addlog">+ Tambah baris</button><button type="button" class="alt" id="dellog">− Hapus yang terakhir</button></div>
+</fieldset>
+
+<fieldset><legend>8. Refleksi berkala (Lampiran 15)</legend>
+<label>Pencapaian yang telah diraih</label><textarea name="r_capai"></textarea>
+<label>Area yang perlu perbaikan</label><textarea name="r_perbaikan"></textarea>
+<label>Rencana tindak lanjut (satu poin per baris)</label><textarea name="r_tindak"></textarea>
+<label>Hambatan/kendala keseluruhan (untuk Lampiran 13)</label><textarea name="r_hambatan"></textarea>
+</fieldset>
+
+<fieldset><legend>9. Catatan tambahan</legend>
+<textarea name="catatan" placeholder="Permintaan khusus, pedoman kampus yang harus diikuti, dll."></textarea>
+</fieldset>
+
+<div class="bar"><button type="button" id="gen">Buat ringkasan</button></div>
+<label style="margin-top:14px">Hasil ringkasan (periksa dulu sebelum dikirim)</label>
+<textarea id="out" readonly></textarea>
+<div id="msg"></div>
+<div id="txtbox" hidden>
+<div class="bar"><button type="button" id="dl">Simpan sebagai file TXT</button></div>
+<button type="button" class="wa" id="shareTxt"><span><small>FILE TXT</small><b>Kirim file ke WhatsApp</b></span></button>
+<div id="msg2" aria-live="polite"></div>
+</div>
+<details><summary>Atau kirim sebagai teks biasa (dibagi per pesan)</summary><div id="send"></div></details>
+<a class="wa" href="https://wa.me/6285143401514" target="_blank" rel="noopener"><span><small>VIA WHATSAPP</small><b>Pesan sekarang</b></span></a>
+<p class="ft">Karya tetap milik kamu. Kami hanya merapikan, bukan menulis isinya.</p>
+</form>
+</main>
+<script>
+var uid=0;
+function linkLabels(root){(root||document).querySelectorAll('label:not([for])').forEach(function(l){var n=l.nextElementSibling;if(n&&/^(INPUT|TEXTAREA|SELECT)$/.test(n.tagName)){if(!n.id)n.id='f'+(++uid);l.htmlFor=n.id;}});}
+function lastFilled(el){var l=el.lastElementChild;return !!l&&Array.prototype.some.call(l.querySelectorAll('input,textarea,select'),function(x){return x.value.trim();});}
+function delLast(el,what){if(el.children.length<=1)return;if(lastFilled(el)&&!confirm(what+' terakhir sudah terisi. Tetap dihapus?'))return;el.removeChild(el.lastChild);}
+var rowsEl=document.getElementById('rows');
+function addRow(){
+  var n=rowsEl.children.length+1,d=document.createElement('div');d.className='row';
+  d.innerHTML='<b>Pertemuan '+n+'</b><div class="g2"><div><label>Hari, tanggal</label><input data-k="tgl" placeholder="mis. Kamis, 6 Agustus 2026"></div><div><label>Jumlah siswa hadir (opsional)</label><input data-k="hadir" inputmode="numeric"></div></div><label>Materi</label><input data-k="materi"><div class="g2"><div><label>Media (opsional)</label><input data-k="media" placeholder="mis. PPT, LKPD, papan tulis"></div><div><label>Metode (opsional)</label><input data-k="metode" placeholder="mis. ceramah, diskusi"></div></div><label>Kegiatan pembelajaran: pembuka, inti, penutup (opsional)</label><textarea data-k="proses" style="min-height:60px"></textarea><label>Kondisi kelas dan hasil belajar (opsional)</label><input data-k="hasil"><label>Kendala dan cara mengatasinya (opsional)</label><input data-k="cat">';
+  rowsEl.appendChild(d);linkLabels(d);
+}
+for(var i=0;i<9;i++)addRow();
+document.getElementById('add').onclick=addRow;
+document.getElementById('del').onclick=function(){delLast(rowsEl,'Pertemuan');};
+function v(n){var e=document.querySelector('[name="'+n+'"]');var s=e?e.value.trim():'';return s||'(KOSONG)';}
+
+var K1=['Ada kegiatan 3S (Senyum, Sapa, Salam)','Bersikap ramah dan santun','Pelaksanaan ibadah bersama','Pengkondisian awal belajar','Suasana kelas yang menyenangkan','Anjuran menjaga 5K (Kebersihan, Keamanan, Ketertiban, Keindahan, dan Kekeluargaan)','Upacara bendera','Penggunaan seragam sekolah','Pelaksanaan disiplin peserta didik','Pelaksanaan disiplin guru','Anjuran memanfaatkan waktu','Tercipta suasana yang tenang dan nyaman untuk belajar'];
+var K2=['Ada visi dan misi sekolah','Ada sosialisasi visi dan misi sekolah','Ada bagan struktur organisasi sekolah','Ada deskripsi tugas untuk masing-masing komponen organisasi sekolah','Ada sosialisasi program kerja sekolah','Ada sosialisasi tata tertib sekolah'];
+function chk(id,a){var h='';a.forEach(function(t,i){h+='<div class="row"><b>'+(i+1)+'. '+t+'</b><div class="g2"><div><select data-c="s" aria-label="Jawaban nomor '+(i+1)+'"><option value="">—</option><option>Ya</option><option>Tidak</option></select></div><div><input data-c="n" aria-label="Catatan nomor '+(i+1)+'" placeholder="Catatan (opsional)"></div></div></div>';});document.getElementById(id).innerHTML=h;}
+chk('k1',K1);chk('k2',K2);
+var logsEl=document.getElementById('logs');
+function addLog(){var n=logsEl.children.length+1,d=document.createElement('div');d.className='row';d.innerHTML='<b>Bimbingan '+n+'</b><div class="g2"><div><label>Minggu / tanggal</label><input data-l="w" placeholder="mis. Minggu ke-1 (4–9 Agu 2026)"></div><div><label>Pembimbing</label><select data-l="p"><option value="">—</option><option>Guru Pamong</option><option>Dosen Pembimbing Lapangan</option></select></div></div><label>Materi / topik bimbingan</label><input data-l="t"><label>Catatan / instruksi / saran tindak lanjut</label><input data-l="c">';logsEl.appendChild(d);linkLabels(d);}
+for(var q=0;q<5;q++)addLog();
+linkLabels();
+document.getElementById('addlog').onclick=addLog;
+document.getElementById('dellog').onclick=function(){delLast(logsEl,'Baris');};
+function chkOut(id,a,L){Array.prototype.forEach.call(document.getElementById(id).children,function(r,i){var s=r.querySelector('[data-c="s"]').value,n=r.querySelector('[data-c="n"]').value.trim();L.push((i+1)+'. '+a[i]+' | '+(s||'(KOSONG)')+' | Catatan: '+(n||'-'));});}
+var SERTAKAN_INSTRUKSI=true; // false = kirim data saja, tanpa blok instruksi format
+var WA_NO='6285143401514', BATAS=4000;
+var FORMAT=[
+'[INSTRUKSI FORMAT UNTUK CLAUDE]',
+'Susun laporan lengkap dalam file Word (.docx) dengan format yang sama persis dengan laporan contoh yang saya lampirkan bersama pesan ini (Laporan_PLP_John_Michael_Carter_revisi-6.docx). Jadikan file itu template: bongkar, lalu ganti seluruh data dan isi narasinya, tanpa mengubah desain.',
+'- Pertahankan watermark/kop gambar (banner logo UNIPAR Jember, Fakultas Keguruan dan Ilmu Pendidikan, Pengenalan Lapangan Persekolahan) di header setiap halaman, logo universitas dan bingkai di sampul, serta footer (“Buku Panduan PLP FKIP 2026” di kiri, nama universitas di kanan, nomor halaman di tengah).',
+'- Halaman A4; margin atas, kanan, dan bawah 3 cm, kiri 4 cm; Times New Roman 12 pt; nomor halaman romawi kecil untuk bagian awal, angka dimulai dari Bab I; sisipkan bagian landscape seperti pada template.',
+'- Semua tabel: garis tunggal hitam 0,5 pt, baris judul berlatar oranye muda FABF8F dengan teks tebal rata tengah, baris judul berulang antarhalaman, teks isi sekitar 9,5–10,5 pt. Judul tabel ditebalkan di atas tabel (Tabel 2.1 dst.).',
+'- Urutan: Sampul; Halaman Pengesahan (tabel tanda tangan Guru Pamong, DPL, Kepala Sekolah, Ka. Bag. PLP dan PPL, lalu Dekan); Kata Pengantar; Daftar Isi; Daftar Tabel; Daftar Gambar; Daftar Lampiran; BAB I Pendahuluan (1.1 Latar Belakang, 1.2 Tujuan, 1.3 Sasaran); BAB II Profil Sekolah (2.1–2.6, Tabel 2.1–2.4); BAB III Hasil Kegiatan PLP (3.1 Observasi, 3.2 Praktik Mengajar dengan Tabel 3.1 dan 3.2, uraian per minggu dan per pertemuan); BAB IV Penutup (Kesimpulan, Saran); Daftar Pustaka; Lampiran 1–16 (lembar observasi, RPM tiap pertemuan, jurnal mingguan, log bimbingan, refleksi berkala, dokumentasi dengan kotak foto kosong); tiap lampiran ditutup tabel tanda tangan.',
+'- Subjudul per pertemuan di Bab III: Waktu pelaksanaan; Kondisi kelas, siswa, dan sarana prasarana; Proses pembelajaran (pendahuluan, inti, penutup); Media dan metode; Hasil belajar; Kendala dan cara mengatasinya. RPM memuat identitas, tujuan, materi, pertanyaan pemantik, model/metode/media, langkah kegiatan (tabel), dan asesmen.',
+'- Perbarui daftar isi, daftar tabel, daftar gambar, dan nomor halamannya agar sesuai hasil akhir.',
+'ATURAN ISI: pakai hanya data di bawah. Tanda (KOSONG) berarti belum ada data: jangan dikarang; kosongkan di dokumen dengan penanda [ ... ] atau tanyakan dahulu. Narasi boleh disusun dan dirapikan dari data yang ada, tetapi tidak boleh menambah fakta (angka, nama, kejadian, hasil) yang tidak tertulis. Tulis dalam bahasa Indonesia baku, sudut pandang penulis.',
+''].join('\n');
+
+
+document.getElementById('gen').onclick=function(){
+  var L=SERTAKAN_INSTRUKSI?[FORMAT]:[];
+  L.push('DATA LAPORAN PLP','','[UMUM]','Sekolah: '+v('sekolah'),'Program keahlian: '+v('proker'),'Kelas / Fase: '+v('fase'),'Alokasi waktu: '+v('alokasi'),'Universitas: '+v('univ'),'Fakultas: '+v('fak'),'Tahun: '+v('tahun'),'Pedoman: '+v('pedoman'),'',
+   '[IDENTITAS MAHASISWA]','Nama: '+v('nama'),'NIM: '+v('nim'),'Program studi: '+v('prodi'),'Kelas yang diajar: '+v('kelas'),'Mata pelajaran: '+v('mapel'),'',
+   '[PEJABAT]','Kepala Sekolah: '+v('ks_nama')+' | NIP/NUPTK: '+v('ks_no'),
+   'Guru Pamong: '+v('gp_nama')+' | NIP/NUPTK: '+v('gp_no'),
+   'DPL: '+v('dpl_nama')+' | NIS/NIP: '+v('dpl_no'),
+   'Dekan: '+v('dekan_nama')+' | NIS/NIP: '+v('dekan_no'),
+   'Ka. Bag. PLP dan PPL: '+v('kabag_nama')+' | NIS/NIP: '+v('kabag_no'),'',
+   '[MASA PLP]','Penerjunan: '+v('terjun'),'Penarikan: '+v('tarik'),'Tanggal tanda tangan: '+v('ttd'),'Hari mengajar: '+v('hari'),'Mulai/terakhir mengajar: '+v('mulai'),'Libur/kegiatan sekolah: '+v('libur'),'','[JADWAL DAN MATERI]');
+  var rs=rowsEl.children,k=0;
+  for(var i=0;i<rs.length;i++){
+    var g=function(key){return rs[i].querySelector('[data-k="'+key+'"]').value.trim();};
+    if(!['tgl','hadir','materi','media','metode','proses','hasil','cat'].some(function(x){return g(x);}))continue;k++;
+    L.push(k+'. '+(g('tgl')||'(KOSONG)')+' | Materi: '+(g('materi')||'(KOSONG)')+' | Hadir: '+(g('hadir')||'(KOSONG)')+' | Media: '+(g('media')||'(KOSONG)')+' | Metode: '+(g('metode')||'(KOSONG)')+' | Kegiatan: '+(g('proses')||'(KOSONG)')+' | Kondisi kelas dan hasil belajar: '+(g('hasil')||'(KOSONG)')+' | Kendala dan solusi: '+(g('cat')||'(KOSONG)'));
+  }
+  L.push('','[PROFIL SEKOLAH]','Identitas sekolah:',v('p_id'),'Visi dan misi:',v('p_visi'),'Jumlah guru dan staf: '+v('p_sdm'),'Daftar guru dan staf:',v('p_guru'),'Peserta didik:',v('p_siswa'),'Sarana dan prasarana:',v('p_sarana'),'Prestasi dan ekstrakurikuler:',v('p_ekskul'),'',
+   '[OBSERVASI]','Catatan observasi: '+v('o_kultur'),'','[LAMPIRAN 1: KULTUR SEKOLAH]');chkOut('k1',K1,L);L.push('','[LAMPIRAN 2: SOTK]');chkOut('k2',K2,L);
+  var lk=0;L.push('','[LAMPIRAN 14: LOG BIMBINGAN]');
+  Array.prototype.forEach.call(logsEl.children,function(r,i){var f=function(k){return r.querySelector('[data-l="'+k+'"]').value.trim()||'(KOSONG)';};if(['w','p','t','c'].every(function(x){return f(x)=='(KOSONG)';}))return;L.push((++lk)+'. '+f('w')+' | Pembimbing: '+f('p')+' | Topik: '+f('t')+' | Catatan: '+f('c'));});
+  L.push('','[REFLEKSI BERKALA]','Pencapaian: '+v('r_capai'),'Perbaikan: '+v('r_perbaikan'),'Tindak lanjut: '+v('r_tindak'),'Hambatan keseluruhan: '+v('r_hambatan'),'','[CATATAN TAMBAHAN]',v('catatan'));
+  var teks=L.join('\n');
+  document.getElementById('out').value=teks;
+  buatBagian(teks);
+  document.getElementById('txtbox').hidden=false;
+  document.getElementById('msg2').textContent='';
+};
+function enc(x){return encodeURIComponent(x).length;}
+function buatBagian(teks){
+  var max=BATAS-200,parts=[],cur='';
+  function add(ln){if(cur&&enc(cur+'\n'+ln)>max){parts.push(cur);cur=ln;}else cur=cur?cur+'\n'+ln:ln;}
+  teks.split('\n').forEach(function(ln){
+    while(enc(ln)>max){var cut=Math.max(1,Math.floor(ln.length*max/enc(ln)));while(cut>1&&enc(ln.slice(0,cut))>max)cut--;add(ln.slice(0,cut));ln=ln.slice(cut);}
+    add(ln);
+  });
+  if(cur)parts.push(cur);
+  var n=parts.length,h='';
+  parts.forEach(function(p,i){
+    var t=(n>1?'['+(i+1)+'/'+n+']\n':'')+p;
+    h+='<a class="wa send" target="_blank" rel="noopener" href="https://wa.me/'+WA_NO+'?text='+encodeURIComponent(t)+'"><span><small>'+(n>1?'BAGIAN '+(i+1)+' DARI '+n:'LANGSUNG KIRIM')+'</small><b>Kirim ke WhatsApp</b></span></a>';
+  });
+  document.getElementById('send').innerHTML=h;
+  document.getElementById('msg').textContent='Ringkasan siap. Simpan sebagai file TXT atau kirim file langsung ke WhatsApp lewat tombol di bawah.'+(n>1?' (Jika memilih kirim sebagai teks biasa, datanya dibagi '+n+' pesan: kirim berurutan dari bagian 1.)':'');
+}
+function namaFile(){var n=(document.querySelector('[name="nama"]').value||'').trim().replace(/[^\w\- ]+/g,'').trim().replace(/\s+/g,'_').slice(0,40);return 'Data_PLP_'+(n||'tanpa_nama')+'_'+new Date().toISOString().slice(0,10)+'.txt';}
+function bikinFile(){var o=document.getElementById('out');if(!o.value)document.getElementById('gen').click();return new File([o.value],namaFile(),{type:'text/plain'});}
+function unduh(f){var u=URL.createObjectURL(f),a=document.createElement('a');a.href=u;a.download=f.name;document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u);},5000);}
+var PESAN='Halo DAMNEDIT, ini file data laporan PLP saya (terlampir).';
+document.getElementById('dl').onclick=function(){var f=bikinFile();unduh(f);document.getElementById('msg2').textContent='File '+f.name+' tersimpan di perangkatmu.';};
+document.getElementById('shareTxt').onclick=function(){
+  var f=bikinFile(),m=document.getElementById('msg2');
+  function cadangan(buka){
+    unduh(f);
+    var u='https://wa.me/'+WA_NO+'?text='+encodeURIComponent(PESAN);
+    m.innerHTML='File tersimpan. Di chat WhatsApp DAMNEDIT, ketuk ikon lampiran (klip) &rarr; Dokumen, lalu pilih <b>'+f.name+'</b>. <a href="'+u+'" target="_blank" rel="noopener">Buka chat WhatsApp</a>';
+    if(buka)window.open(u,'_blank','noopener');
+  }
+  if(navigator.canShare&&navigator.canShare({files:[f]})){
+    navigator.share({files:[f],text:PESAN}).then(function(){m.textContent='Pilih WhatsApp, lalu chat DAMNEDIT (0851-4340-1514) dan tekan kirim.';}).catch(function(e){if(!e||e.name!=='AbortError')cadangan(false);});
+  }else cadangan(true);
+};
+document.getElementById('send').addEventListener('click',function(e){var a=e.target.closest('a');if(a)a.classList.add('done');});
+</script>
+</body>
+</html>
